@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A34A0AAE15D4C15700C152D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34A0AAD15D4C15700C152D0 /* UIKit.framework */; };
+		A34A0AB015D4C15700C152D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34A0AAF15D4C15700C152D0 /* Foundation.framework */; };
+		A34A0AB215D4C15700C152D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A34A0AB115D4C15700C152D0 /* CoreGraphics.framework */; };
+		A34A0AB815D4C15700C152D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A34A0AB615D4C15700C152D0 /* InfoPlist.strings */; };
+		A34A0ABA15D4C15700C152D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A34A0AB915D4C15700C152D0 /* main.m */; };
+		A34A0ABE15D4C15700C152D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A34A0ABD15D4C15700C152D0 /* AppDelegate.m */; };
+		A34A0AED15D4F9DD00C152D0 /* TJSpinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A34A0AEB15D4F9DD00C152D0 /* TJSpinnerViewController.m */; };
+		A3AA4E0115E4CB9300CAFDA9 /* Leaf.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A3AA4E0015E4CB9300CAFDA9 /* Leaf.jpeg */; };
+		A3AA4E0B15E4EF9900CAFDA9 /* TJSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = A3AA4E0A15E4EF9900CAFDA9 /* TJSpinner.m */; };
+		A3B5C7E116007AE100CD11B4 /* Stick.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = A3B5C7E016007AE100CD11B4 /* Stick.jpeg */; };
+		A3B64BC315EF6CA300B8DAFF /* TJSpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3B64BC215EF6CA300B8DAFF /* TJSpinnerViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A34A0AA915D4C15700C152D0 /* Spinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34A0AAD15D4C15700C152D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A34A0AAF15D4C15700C152D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A34A0AB115D4C15700C152D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A34A0AB515D4C15700C152D0 /* Spinner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Spinner-Info.plist"; sourceTree = "<group>"; };
+		A34A0AB715D4C15700C152D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A34A0AB915D4C15700C152D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A34A0ABB15D4C15700C152D0 /* Spinner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Spinner-Prefix.pch"; sourceTree = "<group>"; };
+		A34A0ABC15D4C15700C152D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A34A0ABD15D4C15700C152D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A34A0AEA15D4F9DD00C152D0 /* TJSpinnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJSpinnerViewController.h; sourceTree = "<group>"; };
+		A34A0AEB15D4F9DD00C152D0 /* TJSpinnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSpinnerViewController.m; sourceTree = "<group>"; };
+		A3AA4E0015E4CB9300CAFDA9 /* Leaf.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Leaf.jpeg; sourceTree = "<group>"; };
+		A3AA4E0915E4EF9900CAFDA9 /* TJSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TJSpinner.h; sourceTree = "<group>"; };
+		A3AA4E0A15E4EF9900CAFDA9 /* TJSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TJSpinner.m; sourceTree = "<group>"; };
+		A3B5C7E016007AE100CD11B4 /* Stick.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Stick.jpeg; sourceTree = "<group>"; };
+		A3B64BC215EF6CA300B8DAFF /* TJSpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TJSpinnerViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A34A0AA615D4C15700C152D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A34A0AAE15D4C15700C152D0 /* UIKit.framework in Frameworks */,
+				A34A0AB015D4C15700C152D0 /* Foundation.framework in Frameworks */,
+				A34A0AB215D4C15700C152D0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A34A0A9E15D4C15700C152D0 = {
+			isa = PBXGroup;
+			children = (
+				A34A0AB315D4C15700C152D0 /* Spinner */,
+				A34A0AAC15D4C15700C152D0 /* Frameworks */,
+				A34A0AAA15D4C15700C152D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A34A0AAA15D4C15700C152D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A34A0AA915D4C15700C152D0 /* Spinner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A34A0AAC15D4C15700C152D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A34A0AAD15D4C15700C152D0 /* UIKit.framework */,
+				A34A0AAF15D4C15700C152D0 /* Foundation.framework */,
+				A34A0AB115D4C15700C152D0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A34A0AB315D4C15700C152D0 /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				A34A0ABC15D4C15700C152D0 /* AppDelegate.h */,
+				A34A0ABD15D4C15700C152D0 /* AppDelegate.m */,
+				A3AA4E0915E4EF9900CAFDA9 /* TJSpinner.h */,
+				A3AA4E0A15E4EF9900CAFDA9 /* TJSpinner.m */,
+				A34A0AEA15D4F9DD00C152D0 /* TJSpinnerViewController.h */,
+				A34A0AEB15D4F9DD00C152D0 /* TJSpinnerViewController.m */,
+				A34A0AB415D4C15700C152D0 /* Supporting Files */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
+		A34A0AB415D4C15700C152D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A3B5C7E016007AE100CD11B4 /* Stick.jpeg */,
+				A3AA4E0015E4CB9300CAFDA9 /* Leaf.jpeg */,
+				A34A0AB515D4C15700C152D0 /* Spinner-Info.plist */,
+				A34A0AB615D4C15700C152D0 /* InfoPlist.strings */,
+				A34A0AB915D4C15700C152D0 /* main.m */,
+				A34A0ABB15D4C15700C152D0 /* Spinner-Prefix.pch */,
+				A3B64BC215EF6CA300B8DAFF /* TJSpinnerViewController.xib */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A34A0AA815D4C15700C152D0 /* Spinner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A34A0AC115D4C15700C152D0 /* Build configuration list for PBXNativeTarget "Spinner" */;
+			buildPhases = (
+				A34A0AA515D4C15700C152D0 /* Sources */,
+				A34A0AA615D4C15700C152D0 /* Frameworks */,
+				A34A0AA715D4C15700C152D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spinner;
+			productName = CoreAnimationStuff;
+			productReference = A34A0AA915D4C15700C152D0 /* Spinner.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A34A0AA015D4C15700C152D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "TechJini Solutions Pvt. Ltd.";
+			};
+			buildConfigurationList = A34A0AA315D4C15700C152D0 /* Build configuration list for PBXProject "Spinner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A34A0A9E15D4C15700C152D0;
+			productRefGroup = A34A0AAA15D4C15700C152D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A34A0AA815D4C15700C152D0 /* Spinner */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A34A0AA715D4C15700C152D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A34A0AB815D4C15700C152D0 /* InfoPlist.strings in Resources */,
+				A3AA4E0115E4CB9300CAFDA9 /* Leaf.jpeg in Resources */,
+				A3B64BC315EF6CA300B8DAFF /* TJSpinnerViewController.xib in Resources */,
+				A3B5C7E116007AE100CD11B4 /* Stick.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A34A0AA515D4C15700C152D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A34A0ABA15D4C15700C152D0 /* main.m in Sources */,
+				A34A0ABE15D4C15700C152D0 /* AppDelegate.m in Sources */,
+				A34A0AED15D4F9DD00C152D0 /* TJSpinnerViewController.m in Sources */,
+				A3AA4E0B15E4EF9900CAFDA9 /* TJSpinner.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A34A0AB615D4C15700C152D0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A34A0AB715D4C15700C152D0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A34A0ABF15D4C15700C152D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A34A0AC015D4C15700C152D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A34A0AC215D4C15700C152D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spinner/Spinner-Prefix.pch";
+				INFOPLIST_FILE = "Spinner/Spinner-Info.plist";
+				PRODUCT_NAME = Spinner;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A34A0AC315D4C15700C152D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Spinner/Spinner-Prefix.pch";
+				INFOPLIST_FILE = "Spinner/Spinner-Info.plist";
+				PRODUCT_NAME = Spinner;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A34A0AA315D4C15700C152D0 /* Build configuration list for PBXProject "Spinner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A34A0ABF15D4C15700C152D0 /* Debug */,
+				A34A0AC015D4C15700C152D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A34A0AC115D4C15700C152D0 /* Build configuration list for PBXNativeTarget "Spinner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A34A0AC215D4C15700C152D0 /* Debug */,
+				A34A0AC315D4C15700C152D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A34A0AA015D4C15700C152D0 /* Project object */;
+}
