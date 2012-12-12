@@ -1,7 +1,7 @@
 #iOS-Custom-Activity-Indicator
 =============================
 
-## How I can create?
+## How to use?
 
 <strong><a href="http://www.techjini.com/blog/different-type-custom-activity-indicator-spinner/">Creating custom activity indicator for iOS</a>
 </strong>
@@ -50,6 +50,6 @@ circularSpinner.thickness = 7;
 [circularSpinner release];</code>
 
 
-## How its look like?
+## Sample output
 
 <strong><a href="http://youtu.be/0B3rsdhniBI">iOS Custom Activity indicator or spinner</a></strong>
