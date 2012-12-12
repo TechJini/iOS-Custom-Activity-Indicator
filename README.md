@@ -52,4 +52,4 @@ circularSpinner.thickness = 7;
 
 ## How its look like?
 
-<strong><a href="http://www.techjini.com/blog/wp-content/uploads/2012/10/Screen-Recording-51.mov">iOS Custom Activity indicator or spinner</a></strong>
+<strong><a href="http://youtu.be/0B3rsdhniBI">iOS Custom Activity indicator or spinner</a></strong>
