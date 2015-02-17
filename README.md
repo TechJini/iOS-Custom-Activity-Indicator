@@ -38,7 +38,7 @@ beachBallSpinner.hidesWhenStopped = YES;
 [beachBallSpinner release];
 </code>
 
-<strong>3. Implementation of Circular spinners (similar as web).</strong>
+<strong>3. Implementation of Circular spinners.</strong>
 A. You can change radius (size) of the Circular spinners.
 
 <code>TJSpinner *circularSpinner = [[TJSpinner alloc] initWithSpinnerType:kTJCircularSpinner];
@@ -49,7 +49,7 @@ circularSpinner.fillColor = [UIColor redColor];
 circularSpinner.thickness = 7;
 [circularSpinner release];</code>
 
-<strong>4. Implementation of TJSpinType for confgure to rotation/draw view (similar as web).</strong>
+<strong>4. Implementation of TJSpinType to confgure for rotation/draw the view.</strong>
 A. You can configure spinners.
 <code>spinner.spinType = TJSpinTypeRotate</code> // for flowless spining. Fix: github issue #3 Slow circularSpinner
 
