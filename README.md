@@ -49,7 +49,7 @@ circularSpinner.fillColor = [UIColor redColor];
 circularSpinner.thickness = 7;
 [circularSpinner release];</code>
 
-<strong>3. Implementation of TJSpinType for confgure to rotation/draw view (similar as web).</strong>
+<strong>4. Implementation of TJSpinType for confgure to rotation/draw view (similar as web).</strong>
 A. You can configure spin spinners.
 <code>spinner.spinType = TJSpinTypeRotate</code> // for flowless spining. Fix: github issue #3 Slow circularSpinner
 
