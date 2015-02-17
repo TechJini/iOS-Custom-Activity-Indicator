@@ -69,7 +69,7 @@ typedef enum
 @property(nonatomic,retain) UIColor *pathColor;/*Color to be set to the circular path. By default sky blue is the color of the circular path*/
 @property (nonatomic, assign)CGFloat thickness;/*By default thickness is set to 3.00*/
 
-@property (nonatomic, assign)TJSpinType spinType;/*By default spinType is set to TJSpinTypeRotate and TJSpinTypeDraw for TJActivityIndicator. */
+@property (nonatomic, assign)TJSpinType spinType;/*By default spinType is set to TJSpinTypeRotate and TJSpinTypeDraw for TJActivityIndicator.*/
 
 
 //Spinner initialization method. It is recommended to use this method to create the spinners of your choice.
