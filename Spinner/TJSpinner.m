@@ -2,11 +2,12 @@
 //  TJSpinner.m
 //  Spinner
 //
-//  Created by Aparna Bhat on 22/08/12.
+//  Created by Ranjeet Singh on 22/08/12.
 //  Copyright (c) 2012 TechJini Solutions Pvt. Ltd. All rights reserved.
 //
 
 #import "TJSpinner.h"
+#import <QuartzCore/QuartzCore.h>
 
 //Constants defined for different types of spinners
 NSString *const kTJSpinnerTypeActivityIndicator = @"TJActivityIndicator";
@@ -108,9 +109,7 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
         }
         self.frame = newFrameRect;
         [self setNeedsDisplay];
-        
     }
-    
 }
 
 
@@ -299,7 +298,7 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
         _isAnimating = NO;
         self.innerRadius = 6.00; //Default value
         _strokeIndex = 0;
-        _animationTimer = nil;
+        if (self.spinType == TJSpinTypeDraw) {_animationTimer = nil;}
         self.numberOfStrokes = 12;
         self.strokeWidth = 2.00;
         self.patternStyle = TJActivityIndicatorPatternStyleSolid;
@@ -322,7 +321,7 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 
 - (void)dealloc
 {
-    [_animationTimer release];
+    if (self.spinType == TJSpinTypeDraw) {[_animationTimer release];}
     [super dealloc];
 }
 
@@ -332,18 +331,24 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 {
     [super startAnimating];
     _strokeIndex = 1;
-    [_animationTimer invalidate];
-    _animationTimer = [[NSTimer timerWithTimeInterval:_speed target:self selector:@selector(timerFired:) userInfo:nil repeats:YES]retain];
-    [[NSRunLoop currentRunLoop]addTimer:_animationTimer forMode:NSDefaultRunLoopMode ];
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer invalidate];
+        _animationTimer = [[NSTimer timerWithTimeInterval:_speed target:self selector:@selector(timerFired:) userInfo:nil repeats:YES]retain];
+        [[NSRunLoop currentRunLoop]addTimer:_animationTimer forMode:NSDefaultRunLoopMode ];
+    }
+
 }
 
 - (void)stopAnimating
 {
     //Invalidate the timer to stop the animation
     [super stopAnimating];
-    [_animationTimer invalidate];
-    [_animationTimer release];
-    _animationTimer = nil;
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer invalidate];
+        [_animationTimer release];
+        _animationTimer = nil;
+    }
+
     _strokeIndex = 0;
     [self setNeedsDisplay];
 }
@@ -357,7 +362,6 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, self.strokeWidth);
     float dash[4];
-
 
     for (int i=0; i<self.numberOfStrokes; i++) 
     {
@@ -510,7 +514,11 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 
 - (void)dealloc
 {
-    [_animationTimer release];
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer release];
+        _animationTimer = nil;
+    }
+
     [super dealloc];
 }
 
@@ -591,20 +599,26 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
     //    NSLog(@"Start radial spinner animation");
     [super startAnimating];
     _angle = 180;
-    [_animationTimer invalidate];
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer invalidate];
+        
+        _animationTimer = [[NSTimer timerWithTimeInterval:_speed target:self selector:@selector(timerFired:) userInfo:nil repeats:YES]retain];
+        [[NSRunLoop currentRunLoop]addTimer:_animationTimer forMode:NSDefaultRunLoopMode ];
+    }
 
-    _animationTimer = [[NSTimer timerWithTimeInterval:_speed target:self selector:@selector(timerFired:) userInfo:nil repeats:YES]retain];
-    [[NSRunLoop currentRunLoop]addTimer:_animationTimer forMode:NSDefaultRunLoopMode ];
 
 }
 - (void)stopAnimating
 {
     //    NSLog(@"Stop radial spinner animation");
     [super stopAnimating];
-    //Invalidate the timer to stop the animation
-    [_animationTimer invalidate];
-    [_animationTimer release];
-    _animationTimer = nil;
+//        Invalidate the timer to stop the animation
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer invalidate];
+        [_animationTimer release];
+        _animationTimer = nil;
+    }
+
     _angle = 180;
     [self setNeedsDisplay];
 
@@ -906,7 +920,11 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 - (void)dealloc
 {
     [_segmentColors release];
-    [_animationTimer release];
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer release];
+        _animationTimer = nil;
+    }
+
     [super dealloc];
 }
 
@@ -917,13 +935,15 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect
 {
-
     double startAngle;
     double angleForStep = 360.00/_segmets;
     double angle = 180.00;
     CGContextRef context = UIGraphicsGetCurrentContext();
-    [self drawShadowEffectInContext:context];
-    for (int index=0; index<_segmets; index++) 
+    if(self.spinType == TJSpinTypeDraw)
+    {
+        [self drawShadowEffectInContext:context];
+    }
+    for (int index=0; index<_segmets; index++)
     {
         startAngle = angle;
         angle = angle + angleForStep;
@@ -942,9 +962,12 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 {
     //    NSLog(@"Start beach ball spinner animation");
     [super startAnimating];
-    [_animationTimer invalidate];
-    _animationTimer = [[NSTimer timerWithTimeInterval:_speed target:self selector:@selector(timerFired:) userInfo:nil repeats:YES]retain];
-    [[NSRunLoop currentRunLoop]addTimer:_animationTimer forMode:NSDefaultRunLoopMode ];
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer invalidate];
+        _animationTimer = [[NSTimer timerWithTimeInterval:_speed target:self selector:@selector(timerFired:) userInfo:nil repeats:YES]retain];
+        [[NSRunLoop currentRunLoop]addTimer:_animationTimer forMode:NSDefaultRunLoopMode ];
+    }
+
 
 }
 - (void)stopAnimating
@@ -952,10 +975,11 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
     //    NSLog(@"Stop beach ball spinner animation");
     //Invalidate the timer to stop the animation
     [super stopAnimating];
-    [_animationTimer invalidate];
-    [_animationTimer release];
-    _animationTimer = nil;
-
+    if (self.spinType == TJSpinTypeDraw) {
+        [_animationTimer invalidate];
+        [_animationTimer release];
+        _animationTimer = nil;
+    }
 }
 
 - (void)setRadius:(CGFloat)radius
@@ -1030,6 +1054,10 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
     {
         self = [[NSClassFromString(spinnerType) alloc]init];
         self.hidden = _hidesWhenStopped;
+        if([self isKindOfClass:[TJActivityIndicator class]])
+        {
+            self.spinType = TJSpinTypeDraw;
+        }
     }
     return self;
 }
@@ -1053,11 +1081,46 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 
 #pragma mark -
 #pragma mark Animation Methods
+
+- (void)startRotating
+{
+    CABasicAnimation *rotate = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    rotate.byValue = @(M_PI*2);
+    
+    CGFloat dur = 1.0;
+
+    if ([self isKindOfClass:[TJCircularSpinner class]])
+    {
+//        dur = 1.0/2.0;
+    }
+    else if ([self isKindOfClass:[TJActivityIndicator class]])
+    {
+//        dur = 1.0;
+    }
+    
+    rotate.duration = dur;
+    rotate.timingFunction =
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    rotate.repeatCount = INFINITY;
+    [self.layer addAnimation:rotate
+                      forKey:@"TJSpinnerRotationAnimation"];
+}
+
+- (void)stopRotating
+{
+    [self.layer removeAnimationForKey:@"TJSpinnerRotationAnimation"];
+}
+
 - (void) startAnimating
 {
 //    NSLog(@"Start Animation");
     self.hidden = NO;
     _isAnimating = YES;
+    
+    if (self.spinType == TJSpinTypeRotate)
+    {
+        [self startRotating];
+    }
 }
 
 - (void) stopAnimating
@@ -1065,6 +1128,11 @@ NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 //    NSLog(@"Stop Animation");
     self.hidden = _hidesWhenStopped;
     _isAnimating = NO;
+    
+    if (self.spinType == TJSpinTypeRotate)
+    {
+        [self stopRotating];
+    }
 }
 
 - (void)setHidesWhenStopped:(BOOL)hidesWhenAnimationStopped

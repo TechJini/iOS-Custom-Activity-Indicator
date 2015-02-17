@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  Spinner
 //
-//  Created by Aparna Bhat on 10/08/12.
+//  Created by Ranjeet Singh on 10/08/12.
 //  Copyright (c) 2012 TechJini Solutions Pvt. Ltd. All rights reserved.
 //
 

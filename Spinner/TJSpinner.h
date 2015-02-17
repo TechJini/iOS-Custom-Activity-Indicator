@@ -2,7 +2,7 @@
 //  TJSpinner.h
 //  Spinner
 //
-//  Created by Aparna Bhat on 22/08/12.
+//  Created by Ranjeet Singh on 22/08/12.
 //  Copyright (c) 2012 TechJini Solutions Pvt. Ltd. All rights reserved.
 //
 
@@ -13,6 +13,13 @@ extern NSString *const kTJSpinnerTypeActivityIndicator;
 extern NSString *const kTJSpinnerTypeCircular;
 extern NSString *const kTJSpinnerTypeBeachBall;
 
+// view will be rotating or draw full view to visualized rotation
+typedef enum
+{
+    TJSpinTypeRotate,
+    TJSpinTypeDraw
+    
+} TJSpinType;
 
 //Diffrent patterns that can be set to  kTJSpinnerTypeActivityIndicator type spinner
 typedef enum
@@ -61,6 +68,8 @@ typedef enum
 @property(nonatomic,retain) UIColor *fillColor;/*Color to be used to fill the circular path. By default white is used */
 @property(nonatomic,retain) UIColor *pathColor;/*Color to be set to the circular path. By default sky blue is the color of the circular path*/
 @property (nonatomic, assign)CGFloat thickness;/*By default thickness is set to 3.00*/
+
+@property (nonatomic, assign)TJSpinType spinType;/*By default spinType is set to TJSpinTypeRotate and TJSpinTypeDraw for TJActivityIndicator. */
 
 
 //Spinner initialization method. It is recommended to use this method to create the spinners of your choice.
