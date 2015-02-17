@@ -50,7 +50,7 @@ circularSpinner.thickness = 7;
 [circularSpinner release];</code>
 
 <strong>4. Implementation of TJSpinType for confgure to rotation/draw view (similar as web).</strong>
-A. You can configure spin spinners.
+A. You can configure spinners.
 <code>spinner.spinType = TJSpinTypeRotate</code> // for flowless spining. Fix: github issue #3 Slow circularSpinner
 
 ## Sample output
