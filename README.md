@@ -12,11 +12,11 @@
 TJSppiner has ability to achieve or change colour, size pattern, image, rotation speed etc.
 
 <strong>1. Implementation of line base spinners (similar as iOS Activity indicator).</strong>
-A. You can change inner and outer radius of spinner
-B. You can change number of line to be appear in the circle of the spinner.
-C. You can change appearance of spinner using its property like colour, pattern, caps/stork, image etc...
+A. You can change inner and outer radius of spinner<br/>
+B. You can change number of line to be appear in the circle of the spinner.<br/>
+C. You can change appearance of spinner using its property like colour, pattern, caps/stork, image etc...<br/>
 
-<code> TJSpinner *spinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeActivityIndicator];
+``` TJSpinner *spinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeActivityIndicator];
 spinner.hidesWhenStopped = YES;
 [spinner setColor:[UIColor blackColor]];
 [spinner setInnerRadius:15];
@@ -26,28 +26,28 @@ spinner.hidesWhenStopped = YES;
 [spinner setPatternLineCap:kCGLineCapButt];
 [spinner setPatternStyle:TJActivityIndicatorPatternStyleDot];
 [spinner release];
-</code>
+```
 
 <strong>2. Implementation of BeachBall spinners (similar as iMAC desktop beach ball).</strong>
 A. You can change radius (size) of the beach ball.
 
-<code>
+```
 TJSpinner *beachBallSpinner = [[TJSpinner alloc] initWithSpinnerType:kTJSpinnerTypeBeachBall];
 beachBallSpinner.hidesWhenStopped = YES;
 [beachBallSpinner setRadius:20];
 [beachBallSpinner release];
-</code>
+```
 
 <strong>3. Implementation of Circular spinners.</strong>
 A. You can change radius (size) of the Circular spinners.
 
-<code>TJSpinner *circularSpinner = [[TJSpinner alloc] initWithSpinnerType:kTJCircularSpinner];
+```TJSpinner *circularSpinner = [[TJSpinner alloc] initWithSpinnerType:kTJCircularSpinner];
 circularSpinner.hidesWhenStopped = YES;
 circularSpinner.radius = 10;
 circularSpinner.pathColor = [UIColor whiteColor];
 circularSpinner.fillColor = [UIColor redColor];
 circularSpinner.thickness = 7;
-[circularSpinner release];</code>
+[circularSpinner release];```
 
 <strong>4. Implementation of TJSpinType to confgure for rotation/draw the view.</strong>
 A. You can configure spinners.
