@@ -14,6 +14,16 @@ NSString *const kTJSpinnerTypeActivityIndicator = @"TJActivityIndicator";
 NSString *const kTJSpinnerTypeCircular = @"TJCircularSpinner";
 NSString *const kTJSpinnerTypeBeachBall = @"TJBeachBallSpinner";
 
+//Degree/Radian conversion macros
+#ifndef DEGREES_TO_RADIANS
+#define DEGREES_TO_RADIANS(angle) (angle / 180.0 * M_PI)
+#endif
+
+
+#ifndef RADIANS_TO_DEGREES
+#define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI))
+#endif
+
 //Constant for setting beach ball spinner shadow effect
 #define k_SHADOW_OFFSET 0.65
 #define k_CIRCE_EDGE_WIDTH 2.00
